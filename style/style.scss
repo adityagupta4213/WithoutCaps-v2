@@ -1,0 +1,111 @@
+$black: #111010;
+
+body {
+	font-family: 'Segoe UI', sans-serif !important;
+}
+
+.navigation {
+	.menu{
+		padding: 1rem;
+		padding-bottom: 0;	
+		background-color: $black;
+		color: white;
+		transition: 0.2s;
+		.logo{
+			font-family: 'Vhia';
+			font-size: 2.5rem;
+		}
+		.icon{
+			float: right;
+			font-size: 2rem;
+			cursor: pointer;
+		}
+	}
+	.expanded-menu{
+		display: none;
+		position: fixed;
+		width: 100%;
+		background-color: white;		
+		transition: 0.2s;
+		ul{
+			padding: 1rem;
+			padding-bottom: 0;
+			list-style-type: none;			
+			text-align: right;
+		}
+		ul li{
+			display: inline;
+			margin: 2rem 1rem;
+		}
+		.menu-item{
+			font-weight: bold;
+			color: $black;
+		}
+		.menu-item:hover{
+			color: red;
+		}
+	}
+}
+
+.header{
+	height: 75vh;
+	padding: 10%;
+	text-align: center;
+	color: white;
+	background-color: $black;
+}
+
+
+.section-heading{		
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#about{
+	margin: 8rem 1rem;
+	text-align: right;
+}
+
+#products{
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../res/product-background.png');
+	background-attachment: fixed;
+	color: white;
+	padding: 2rem;
+	text-align: center;
+	.product{
+		margin: 4rem;
+		padding: 5rem 0;
+		border: 2px solid white;
+		transition: 0.2s;
+		cursor: pointer;
+		.product-name{
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+	}
+	.product:hover{
+		border-color: $black;
+		color: $black;
+		background: white;
+	}
+}
+
+.footer{
+	margin: 4rem;
+	text-align: center;
+	.social-links{
+		list-style-type: none;
+		li{			
+			display: inline;
+			margin: 0 1rem;
+		}
+		.social-link-item{
+			font-size: 1.5rem;
+			color: $black;
+			transition: 0.2s;
+		}
+		.social-link-item:hover, .social-link-item:active, .social-link-item:focus {
+			color: black;
+		}
+	}
+}
