@@ -4,7 +4,30 @@ body {
 	font-family: 'Segoe UI', sans-serif !important;
 }
 
-.navigation {
+.basic-menu{
+	background-color: $black;		
+	transition: 0.2s;
+	ul{
+		padding: 1rem;
+		padding-bottom: 0;
+		list-style-type: none;			
+		text-align: right;
+	}
+	ul li{
+		display: inline;
+		margin: 2rem 1rem;
+	}
+	.menu-item{
+		font-weight: bold;
+		color: white;
+	}
+	.menu-item:hover{
+		color: red;
+	}
+}
+
+.navigation-mobile {
+	display: none;
 	.menu{
 		padding: 1rem;
 		padding-bottom: 0;	
@@ -21,72 +44,83 @@ body {
 			cursor: pointer;
 		}
 	}
+
 	.expanded-menu{
+		@extend .basic-menu;
 		display: none;
 		position: fixed;
 		width: 100%;
-		background-color: white;		
-		transition: 0.2s;
-		ul{
-			padding: 1rem;
-			padding-bottom: 0;
-			list-style-type: none;			
-			text-align: right;
-		}
-		ul li{
-			display: inline;
-			margin: 2rem 1rem;
-		}
-		.menu-item{
-			font-weight: bold;
-			color: $black;
-		}
-		.menu-item:hover{
-			color: red;
-		}
+	}
+}
+
+.navigation{
+	position: fixed;
+	width: 100%;
+	padding: 0 1rem;
+	color: white;
+	background: $black;
+	.logo{
+		display: inline;
+		font-family: 'Vhia';
+		font-size: 2.5rem;
+		color: white;
+		background: $black;
+	}
+	.top-nav{
+		@extend .basic-menu;
+		display: inline-block;
+		width: 80%;		
+		float: right;		
 	}
 }
 
 .header{
 	height: 75vh;
-	padding: 10%;
+	padding: 15%;
 	text-align: center;
 	color: white;
 	background-color: $black;
+	background-image: url('../res/header-bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
 }
-
 
 .section-heading{		
 	font-size: 2rem;
 	font-weight: bold;
 }
 
-#about{
-	margin: 8rem 1rem;
-	text-align: right;
-}
-
-#products{
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../res/product-background.png');
-	background-attachment: fixed;
-	color: white;
-	padding: 2rem;
-	text-align: center;
-	.product{
-		margin: 4rem;
-		padding: 5rem 0;
-		border: 2px solid white;
-		transition: 0.2s;
-		cursor: pointer;
-		.product-name{
-			font-size: 1.5rem;
-			font-weight: bold;
+.content{
+	padding-top: 8rem;
+	padding: inherit 1rem;
+	text-align: right;	
+	.about{
+		padding-bottom: 8rem;
+	}	
+	#products{	
+		padding: 2rem;
+		text-align: center;	
+		color: white;
+		background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../res/product-background.png');
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		.product{
+			margin: 4rem;
+			padding: 5rem 0;
+			border: 2px solid white;
+			transition: 0.2s;
+			cursor: pointer;
+			.product-name{
+				font-size: 1.5rem;
+				font-weight: bold;
+			}
 		}
-	}
-	.product:hover{
-		border-color: $black;
-		color: $black;
-		background: white;
+		.product:hover{
+			border-color: $black;
+			color: $black;
+			background: white;
+		}
 	}
 }
 
@@ -107,5 +141,43 @@ body {
 		.social-link-item:hover, .social-link-item:active, .social-link-item:focus {
 			color: black;
 		}
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.header{
+		height: 50vh;
+		padding: 30% 0;
+		padding-top: 20%;
+		background: $black;
+	}	
+}
+
+@media screen and (max-width: 768px){
+	.navigation{
+		display: none;
+	}
+	.navigation-mobile{
+		display: block;
+		.expanded-menu{
+			.menu-item{
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 360px){
+	.content{
+		#products{
+		padding: 2rem;
+		.product{
+			margin: 1rem;
+			}
+		}
+	}
+	.footer{
+		margin: 2rem;
 	}
 }
