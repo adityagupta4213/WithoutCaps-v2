@@ -1,17 +1,45 @@
+$black: #111010;
 .header {
-    background: black;
+    background-color: $black;
+    background-image: none;
+    padding: 10% 0;
 }
 
-.content{
+.image-slider{
+    margin: 4rem auto;
+    margin-bottom: 1rem;
+    *{
+        z-index: -1;
+    }
+}
+
+.content {
+    padding: 0;
     text-align: left;
-    .description{
+    .description {
         margin: 5rem auto;
         padding: 0 15vw;
-        i{
+        i {
             font-size: 5rem;
         }
-        h2{
+        h2 {
             font-size: 1.5rem;
+        }
+    }
+    .download-wrapper {
+        text-align: center;
+        .download {
+            padding: 1rem 2rem;
+            border: 2px solid $black;
+            text-align: center;
+            font-weight: bold;
+            color: $black;
+            transition: 0.2s;
+        }
+        .download:hover,
+        .download:active {
+            background: $black;
+            color: white;
         }
     }
 }
