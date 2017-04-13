@@ -3,12 +3,25 @@ $black: #111010;
     background-color: $black;
     background-image: none;
     padding: 10% 0;
+    .play-video {
+        i {
+            font-size: 3rem;
+            color: white;
+            transition: 0.2s;
+        }
+    }
+    .play-video:hover,
+    .play-video:active {
+        i {
+            font-size: 4rem;
+        }
+    }
 }
 
-.image-slider{
+.image-slider {
     margin: 4rem auto;
     margin-bottom: 1rem;
-    *{
+    * {
         z-index: -1;
     }
 }
