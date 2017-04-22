@@ -2,23 +2,36 @@
 <html>
 
 <head>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-83693924-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="style/style.css" />
-    <title>WithoutCaps</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>WithoutCaps - Shopping list</title>
 </head>
 
 <body>
-
-    <script>
-        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
     <div class="navigation">
         <span class="logo">W</span>
         <nav class="top-nav">
             <ul>
-                <li><a href="../index.html" class="menu-item">HOME</a></li>
+                <li><a href="../../" class="menu-item">HOME</a></li>
                 <li><a href="#contact" class="menu-item">CONTACT</a></li>
             </ul>
         </nav>
@@ -31,14 +44,14 @@
         </div>
         <nav class="expanded-menu">
             <ul>
-                <li><a href="#home" class="menu-item">HOME</a></li>
+                <li><a href="../../" class="menu-item">HOME</a></li>
                 <li><a href="#contact" class="menu-item">CONTACT</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="header" id="home">
-        <h1>SYSTEM MONITOR</h1>
+        <h1>SHOPPING LIST</h1>
         <a href="promo-video.html" class="play-video"><i class="zmdi zmdi-play"></i></a>
     </div>
     <div class="image-slider row">
@@ -71,31 +84,11 @@
                 </div>
                 <div class="large-10 columns">
                     <h2>
-                       Lorem
+                      Shopping list
                    </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, provident dolores consequatur voluptate, quia, sint animi optio doloribus magnam, iusto quo a reiciendis consequuntur! Facilis labore ad vero excepturi incidunt.</p>
-                </div>
-            </section>
-            <section class="description row">
-                <div class="large-2 columns">
-                    <i class="zmdi zmdi-memory"></i>
-                </div>
-                <div class="large-10 columns">
-                    <h2>
-                       Lorem
-                   </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, provident dolores consequatur voluptate, quia, sint animi optio doloribus magnam, iusto quo a reiciendis consequuntur! Facilis labore ad vero excepturi incidunt.</p>
-                </div>
-            </section>
-            <section class="description row">
-                <div class="large-2 columns">
-                    <i class="zmdi zmdi-remote-control"></i>
-                </div>
-                <div class="large-10 columns">
-                    <h2>
-                       Lorem
-                   </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, provident dolores consequatur voluptate, quia, sint animi optio doloribus magnam, iusto quo a reiciendis consequuntur! Facilis labore ad vero excepturi incidunt.</p>
+                    <p>Simple and usefull android application that helps to pick out products for your next food shopping</p>
+                    <h5>Features:</h5>
+                    <p>1. Material Design </br>2. Simplicity</p>
                 </div>
             </section>
             <div class="download-wrapper">
@@ -115,11 +108,12 @@
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/base.js"></script>
-    <script type="text/javascript" src="js/jssor.min.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="../../js/base.js"></script>
+    <script type="text/javascript" src="../js/jssor.min.js"></script>
+    <script type="text/javascript" src="../js/slider.js"></script>
     <script>
         jssor_1_slider_init();
+
     </script>
 </body>
 
